@@ -4,7 +4,7 @@ import '../App.css';
 export default function ProductCard (props: productDataInterface) {
     const { imageUrl, origin, price, title, currency } = props.data
 
-    const formattedPrice = Intl.NumberFormat("ru-RU", { style: "currency", currency }).format(price)
+    const formattedPrice = Intl.NumberFormat("ru-RU", { style: "currency", currency }).format(price/100)
 
     return (
         <div className="product">
